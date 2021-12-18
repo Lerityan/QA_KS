@@ -1,1 +1,70 @@
-https://docs.google.com/spreadsheets/d/1prfZyKimKrVkilm_ubzIc6BNxDdIz-AB3WYR8ccmLtA/edit?usp=sharing
+Посмотреть где я	
+pwd
+
+Создать папку	
+mkdir foldername
+
+Зайти в папку	
+cd foldername
+
+Создать 3 папки	
+mkdir foldername1 foldername2 foldername3
+
+Зайти в любую папку	
+cd foldername3
+
+Создать 5 файлов (3 txt, 2 json)	
+touch 1.txt 2.txt 3.txt 1.json 2.json
+
+Создать 3 папки	
+mkdir foldername4 foldername5 foldername6
+
+Вывести список содержимого папки	
+ls -a
+
+Открыть любой txt файл	
+vim 1.txt
+
+написать туда что-нибудь, любой текст.	
+i something
+
+сохранить и выйти	
+esc ZZ
+
+Выйти из папки на уровень выше	
+cd ..
+
+"переместить любые 2 файла, которые вы создали,
+ в любую другую папку."	
+mv 1.txt 2.txt foldername6
+
+"скопировать любые 2 файла, которые вы создали, 
+в любую другую папку."	
+cp 1.json 2.json foldername5
+
+Найти файл по имени	
+find -name "1.txt"
+
+"просмотреть содержимое в реальном времени 
+(команда grep) изучите как она работает."
+grep  "" 1.txt
+
+вывести несколько первых строк из текстового файла	head
+
+вывести несколько последних строк из текстового файла	
+tail
+
+"просмотреть содержимое длинного файла 
+(команда less) изучите как она работает"	less
+
+вывести дату и время	
+date
+	
+Отправить http запрос на сервер.	
+
+curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
+http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000	
+	
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13	
+#!/bin/bash
+mkdir foldername;cd foldername;mkdir foldername1 foldername2 foldername3;cd foldername3;touch 1.txt 2.txt 3.txt 1.json 2.json;mkdir foldername4 foldername5 foldername6;cd ..
