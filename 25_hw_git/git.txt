@@ -63,9 +63,13 @@ JSON
  19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
  
  20. Синхронизировать внешний и локальный репозиторий JSON
- 
+
  git fetche 
  git merge
+
+или 
+
+ git pull
 
 
 XML
@@ -131,6 +135,10 @@ XML
  
  git fetch
  git merge
+
+ или
+
+ git pull
  
  TXT
  1. Создать внешний репозиторий c названием TXT.
@@ -197,3 +205,7 @@ XML
  
  git fetch
  git merge
+
+ или 
+
+ git pull
