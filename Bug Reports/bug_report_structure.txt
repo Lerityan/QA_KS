@@ -1,0 +1,11 @@
+Summary
+Severity
+Priority
+Enviroment
+STR
+Result
+ER
+Attachment
+Status
+Author
+Assigned 
