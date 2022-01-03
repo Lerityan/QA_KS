@@ -1,1 +1,3 @@
 # QA_KS
+
+GUSHCHIN_HW
