@@ -71,4 +71,11 @@ curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
 	
 22) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13	
 #!/bin/bash
-mkdir foldername;cd foldername;mkdir foldername1 foldername2 foldername3;cd foldername3;touch 1.txt 2.txt 3.txt 1.json 2.json;mkdir foldername4 foldername5 foldername6;cd ..
+mkdir foldername;
+cd foldername;
+mkdir foldername1 foldername2 foldername3;
+cd foldername3;
+touch 1.txt 2.txt 3.txt 1.json 2.json;
+mkdir foldername4 foldername5 foldername6;
+ls -a;
+mv 1.txt 2.txt foldername6;
