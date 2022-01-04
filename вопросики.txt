@@ -1,0 +1,15 @@
+Вопросики: есть ли вариативность ДЗ.
+
+Какой маркер того, что дошел до конца.
+
+select id, name from students where (name like '%a%') or (name  like '%A%') ;
+
+
+user_25_221	qa_ddl_25_221	Ivan Gushchin     
+
+alter column taxi type varchar (40) using taxi::varchar(30);
+
+че за две точки
+
+домашку по SQL со звездочками
+
