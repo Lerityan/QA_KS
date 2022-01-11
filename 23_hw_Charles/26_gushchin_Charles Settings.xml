@@ -630,21 +630,6 @@
                   <caseSensitive>false</caseSensitive>
                   <replaceType>1</replaceType>
                 </rewriteRule>
-                <rewriteRule>
-                  <active>false</active>
-                  <ruleType>7</ruleType>
-                  <matchValue>salary</matchValue>
-                  <matchHeaderRegex>false</matchHeaderRegex>
-                  <matchValueRegex>false</matchValueRegex>
-                  <matchRequest>true</matchRequest>
-                  <matchResponse>true</matchResponse>
-                  <newValue>huyarili</newValue>
-                  <newHeaderRegex>false</newHeaderRegex>
-                  <newValueRegex>false</newValueRegex>
-                  <matchWholeValue>false</matchWholeValue>
-                  <caseSensitive>false</caseSensitive>
-                  <replaceType>2</replaceType>
-                </rewriteRule>
               </rules>
             </rewriteSet>
             <rewriteSet>
