@@ -179,7 +179,7 @@
       </entry>
       <entry>
         <string>RequestResponsePanel.DIVIDER_LOCATON</string>
-        <int>308</int>
+        <int>294</int>
       </entry>
       <entry>
         <string>SummaryPanel.TABLE_COLUMN_STATES</string>
@@ -222,7 +222,7 @@
       <entry>
         <string>Breakpoints</string>
         <breakpoints>
-          <toolEnabled>false</toolEnabled>
+          <toolEnabled>true</toolEnabled>
           <breakpoints>
             <breakpoint>
               <location>
@@ -417,7 +417,7 @@
             </rewriteSet>
             <rewriteSet>
               <active>true</active>
-              <name>ex_3 - непонятно</name>
+              <name>ex_3</name>
               <hosts>
                 <locationPatterns>
                   <locationMatch>
@@ -537,12 +537,12 @@
                 <rewriteRule>
                   <active>true</active>
                   <ruleType>11</ruleType>
-                  <matchValue>\d*</matchValue>
+                  <matchValue>\d* OK</matchValue>
                   <matchHeaderRegex>false</matchHeaderRegex>
                   <matchValueRegex>true</matchValueRegex>
                   <matchRequest>false</matchRequest>
                   <matchResponse>false</matchResponse>
-                  <newValue>405</newValue>
+                  <newValue>405 Error</newValue>
                   <newHeaderRegex>false</newHeaderRegex>
                   <newValueRegex>false</newValueRegex>
                   <matchWholeValue>false</matchWholeValue>
@@ -552,12 +552,12 @@
                 <rewriteRule>
                   <active>true</active>
                   <ruleType>11</ruleType>
-                  <matchValue>\d*</matchValue>
+                  <matchValue>\d* OK</matchValue>
                   <matchHeaderRegex>false</matchHeaderRegex>
                   <matchValueRegex>true</matchValueRegex>
                   <matchRequest>false</matchRequest>
                   <matchResponse>false</matchResponse>
-                  <newValue>500</newValue>
+                  <newValue>500 Error</newValue>
                   <newHeaderRegex>false</newHeaderRegex>
                   <newValueRegex>false</newValueRegex>
                   <matchWholeValue>false</matchWholeValue>
@@ -618,12 +618,12 @@
                 <rewriteRule>
                   <active>true</active>
                   <ruleType>11</ruleType>
-                  <matchValue>\d*</matchValue>
+                  <matchValue>\d* OK</matchValue>
                   <matchHeaderRegex>false</matchHeaderRegex>
                   <matchValueRegex>true</matchValueRegex>
                   <matchRequest>false</matchRequest>
                   <matchResponse>false</matchResponse>
-                  <newValue>405</newValue>
+                  <newValue>405 Error</newValue>
                   <newHeaderRegex>false</newHeaderRegex>
                   <newValueRegex>false</newValueRegex>
                   <matchWholeValue>false</matchWholeValue>
@@ -801,14 +801,6 @@
       <locationPatterns>
         <locationMatch>
           <location>
-            <protocol>http</protocol>
-            <host>162.55.220.72</host>
-            <port>5005</port>
-          </location>
-          <enabled>true</enabled>
-        </locationMatch>
-        <locationMatch>
-          <location>
             <protocol>https</protocol>
             <host>gc.onliner.by</host>
             <port>443</port>
@@ -820,6 +812,14 @@
             <protocol>https</protocol>
             <host>catalog.onliner.by</host>
             <port>443</port>
+          </location>
+          <enabled>true</enabled>
+        </locationMatch>
+        <locationMatch>
+          <location>
+            <protocol>http</protocol>
+            <host>162.55.220.72</host>
+            <port>5005</port>
           </location>
           <enabled>true</enabled>
         </locationMatch>
