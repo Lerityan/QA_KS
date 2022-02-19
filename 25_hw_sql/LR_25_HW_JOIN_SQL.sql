@@ -79,21 +79,30 @@ where role_name like '% Automation QA%';
 
 -- 12
 
-select employee_name as name,  role_name as role from employees left join roles_employee on (employees.id = employee_id)
-															   left join roles on (roles.id = role_id)
+select employee_name, monthly_salary, role_name from employees left join roles_employee on (employees.id = employee_id)
+															  left join roles on (roles.id = role_id)
+															  left  join employee_salary on (employees.id = employee_salary.employee_id)
+															  left join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%Junior%';
+
 
 -- 13
 
-select employee_name as name,  role_name as role from employees left join roles_employee on (employees.id = employee_id)
+select employee_name, monthly_salary, role_name from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
+															   left join employee_salary on (employees.id = employee_salary.employee_id)
+															   left join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%Middle%';
+
+
 
 -- 14
 
 
-select employee_name as name,  role_name as role from employees left join roles_employee on (employees.id = employee_id)
+select employee_name, monthly_salary, role_name from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
+															   left join employee_salary on (employees.id = employee_salary.employee_id)
+															   left join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%Senior%';
 
 -- 15
