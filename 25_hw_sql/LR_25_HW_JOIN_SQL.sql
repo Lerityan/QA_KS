@@ -1,3 +1,9 @@
+select * from employees left join roles_employee on (employees.id = employee_id)
+															   left join roles on (roles.id = role_id)
+															   left join employee_salary on (employees.id = employee_salary.employee_id)
+															   left join salary on (employee_salary.salary_id = salary.id)
+order by employees.id
+															   
 -- 1
 
 select employee_name as name, monthly_salary as salary from employees 
@@ -15,11 +21,11 @@ monthly_salary < 2000;
 
 
 
--- создаем волонтера 
+-- ??????? ????????? 
 insert into employees (employee_name)
 values ('Mr. Nocash');
 
--- назначаем ему волонтерскую зп
+-- ????????? ??? ???????????? ??
 
 insert into employee_salary (employee_id, salary_id) 
 (select employees.id, 50 from employees where employee_name = 'Mr. Nocash'); 
@@ -40,7 +46,7 @@ where (employee_id is null) and (monthly_salary<2000);
 
 -- 5
 select employee_name as name, monthly_salary as salary from employees 
-						join employee_salary on (employees.id = employee_id)
+						left join employee_salary on (employees.id = employee_id)
 						left join salary on (salary.id = salary_id)
 where 						
 monthly_salary is null;
@@ -162,15 +168,8 @@ select round(avg(monthly_salary),2) as avg_salary from employees left join roles
 															   join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%Junior%';
 
+
 -- 22
-
-select round(avg(monthly_salary),2) as avg_salary from employees left join roles_employee on (employees.id = employee_id)
-															   left join roles on (roles.id = role_id)
-															   left join employee_salary on (employees.id = employee_salary.employee_id)
-															   join salary on (employee_salary.salary_id = salary.id)
-where role_name like '%Junior%';
-
--- 23
 															   
 select sum(monthly_salary) as sum_salary from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
@@ -178,14 +177,14 @@ select sum(monthly_salary) as sum_salary from employees left join roles_employee
 															   join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%JavaS%';
 
--- 24
+-- 23
 select min(monthly_salary) as sum_salary from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
 															   left join employee_salary on (employees.id = employee_salary.employee_id)
 															   join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%QA%';
 
--- 25
+-- 24
 
 select max(monthly_salary) as sum_salary from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
@@ -193,27 +192,39 @@ select max(monthly_salary) as sum_salary from employees left join roles_employee
 															   join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%QA%';
 
--- 26 
+-- 25 
 select count(employees.id) as qa_total from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
 															   left join employee_salary on (employees.id = employee_salary.employee_id)
-															   join salary on (employee_salary.salary_id = salary.id)
+															   left join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%QA%';
 
--- 27
+-- 26
 select count(employees.id) as mid_total from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
 															   left join employee_salary on (employees.id = employee_salary.employee_id)
-															   join salary on (employee_salary.salary_id = salary.id)
+															   left join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%Middle%';
+
+-- 27
+
+select count(employees.id) as mid_total from employees left join roles_employee on (employees.id = employee_id)
+															   left join roles on (roles.id = role_id)
+															   left join employee_salary on (employees.id = employee_salary.employee_id)
+															   left join salary on (employee_salary.salary_id = salary.id)
+where role_name like '%dev%';
 
 -- 28
 
-select count(employees.id) as mid_total from employees left join roles_employee on (employees.id = employee_id)
+select sum(monthly_salary) as fund from employees left join roles_employee on (employees.id = employee_id)
 															   left join roles on (roles.id = role_id)
 															   left join employee_salary on (employees.id = employee_salary.employee_id)
-															   join salary on (employee_salary.salary_id = salary.id)
+															   left join salary on (employee_salary.salary_id = salary.id)
 where role_name like '%dev%';
+
+
+
+
 
 -- 29
 select employee_name as name,  role_name as role, monthly_salary as salary from employees left join roles_employee on (employees.id = employee_id)
